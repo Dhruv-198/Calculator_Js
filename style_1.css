@@ -1,0 +1,139 @@
+/**************************************** Reset default margin and padding for all elements ************************************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/************************************************************* Body styles ******************************************************/
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh; 
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1)), url("bg-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  user-select: none;
+  animation: fadeIn 2s ease-in-out; 
+  margin: 0; 
+}
+
+/***************************************************** Calculator container styles ********************************************/
+.calculator {
+  height: 600px;
+  width: 500px;
+  padding: 16px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(230, 230, 250, 0.9)); 
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: 126px 86px 86px 86px 86px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1.5s ease-out; 
+}
+
+/******************************************************** Screen styles ******************************************************/
+.screen {
+  margin: 12px 12px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.9)); 
+  border: 3.2px solid rgba(0, 0, 0, 0.5);
+  display: grid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px;
+  animation: glow 2s infinite alternate; 
+  
+}
+.screen input[type="text"]{
+  font-size: 33px;
+  text-align: right;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+.row {
+  margin: 0 8px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/************************************************************ Button styles *************************************************/
+.button {
+  height: 58px;
+  padding: 8px 16px;
+  margin: 12px 8px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border: 3.2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.8)); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/******************************************************* Button hover effect ***********************************************/
+.button:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); 
+  transform: scale(1.1); 
+}
+
+/******************************************************** Button active effect *****************************************/
+.button:active {
+  transform: translateY(4px);
+}
+
+/***************************************************** Specific button styles ******************************************/
+
+.button-1 {
+  background: linear-gradient(to bottom, rgba(106, 17, 203, 0.8), rgba(37, 117, 252, 0.8));
+}
+
+.button-2 {
+  background: linear-gradient(to bottom, rgba(43, 88, 118, 0.9), rgba(78, 67, 118, 0.9)); 
+}
+
+.button-3 {
+  background: linear-gradient(to bottom, rgba(255, 81, 47, 0.9), rgba(240, 152, 25, 0.9)); 
+}
+
+.button-4 {
+  background: linear-gradient(to bottom, rgba(0, 198, 255, 0.9), rgba(0, 114, 255, 0.9)); 
+  color: #ffffff;
+}
+
+/************************************************* Animations *********************************************************/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
